@@ -1,0 +1,653 @@
+/* ─────────────────────────────────────────────
+   SECTION BASE
+───────────────────────────────────────────── */
+
+.section {
+  min-height: 100vh;
+  padding: clamp(6rem, 12vw, 7rem) clamp(1.25rem, 4vw, 1.25rem) clamp(3rem, 6vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.sectionBg {
+  width: 100%;
+  position: relative;
+  padding: 5rem clamp(1.25rem, 4vw, 1.25rem) 4rem;
+  background-image: var(--section-bg, none);
+  background-color: #131212;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sectionBg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.84);
+  z-index: 1;
+}
+
+.sectionBg > * {
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: 60rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sectionText {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 72ch;
+}
+
+
+/* ─────────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────────── */
+
+.btnGhost {
+  padding: 0.75rem 1.75rem;
+  border-radius: 50rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.btnGhost:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.btnPrimary {
+  padding: 0.75rem 1.75rem;
+  border-radius: 50rem;
+  background: rgba(109, 186, 161, 0.13);
+  border: 1px solid rgba(109, 186, 161, 0.38);
+  color: var(--accent-sage);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.btnPrimary:hover {
+  background: rgba(109, 186, 161, 0.22);
+}
+
+/* ─────────────────────────────────────────────
+   PROBLEM
+───────────────────────────────────────────── */
+
+.problemSection {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.03)), #131212;
+}
+
+.zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.zigzagRow {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3rem);
+}
+
+.zigzagRowReverse {
+  flex-direction: row-reverse;
+}
+
+.zigzagRow .zigzagContent {
+  text-align: left;
+}
+
+.zigzagRowReverse .zigzagContent {
+  text-align: right;
+}
+
+.zigzagIcon {
+  flex: 0 0 auto;
+  width: clamp(5rem, 10vw, 7rem);
+  height: clamp(5rem, 10vw, 7rem);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--text-primary);
+  color: var(--text-primary);
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.zigzagContent h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.zigzagContent p {
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 50ch;
+}
+
+
+/* ─────────────────────────────────────────────
+   APPROACH
+───────────────────────────────────────────── */
+
+.principlesInner {
+  text-align: center;
+  max-width: 60rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  width: min(80vw, 80rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.featureIcon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--text-primary);
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.featureItem h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.featureItem p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-tertiary);
+  line-height: 1.65;
+  max-width: 26rem;
+}
+
+.pilotWrap {
+  padding: 4rem clamp(1.25rem, 4vw, 1.25rem);
+  background: #131212;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pilotStep {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.pilotDot {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #131212;
+  border: 2px solid var(--accent-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-sage);
+  z-index: 1;
+  font-family: 'Outfit', sans-serif;
+}
+
+.pilotBody h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.pilotDate {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--accent-sage);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.pilotBody p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+
+/* ─────────────────────────────────────────────
+   IMPACT
+───────────────────────────────────────────── */
+
+.cardSection {
+  background: #181818;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  padding: 1.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(109, 186, 161, 0.3);
+}
+
+.cardIcon {
+  font-size: 1.75rem;
+  color: var(--accent-sage);
+  margin: 0.25rem auto;
+}
+
+.card h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 auto;
+}
+
+.card p {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────────
+   TIMELINE VIEW
+───────────────────────────────────────────── */
+
+.timelineSection {
+  background: #131212;
+  overflow: hidden;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2rem 0;
+  min-width: unset;
+}
+
+.timelineScroll {
+  width: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 60vh;
+  padding: 0 clamp(1.25rem, 4vw, 3rem) 2rem;
+  -webkit-mask-image: linear-gradient(to bottom, black 0, black 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0, black 75%, transparent 100%);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.timelineScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-sage) 0%, var(--accent-sage) 90%, transparent 100%);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.contentTop {
+  height: auto;
+  justify-content: center;
+  text-align: right;
+  padding: 1.5rem 2rem 1.5rem 0;
+}
+
+.contentBottom {
+  height: auto;
+  text-align: left;
+  padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.dot {
+  margin: 0;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #131212;
+  border: 2px solid var(--accent-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.dotIcon {
+  font-size: 0.9rem;
+  color: var(--accent-sage);
+}
+
+.date {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--accent-sage);
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.desc {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .timelineScroll {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .timeline {
+    flex-direction: column;
+    min-width: unset;
+    gap: 2rem;
+    padding-top: 0;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, var(--accent-sage), rgba(109, 186, 161, 0.1));
+  }
+
+  .item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+  }
+
+  .contentTop {
+    grid-column: 1;
+    height: auto;
+    justify-content: flex-start;
+    text-align: right;
+    opacity: 1;
+  }
+
+  .dot {
+    grid-column: 2;
+    margin: 0 0.75rem;
+  }
+
+  .contentBottom {
+    grid-column: 3;
+    height: auto;
+    text-align: left;
+    opacity: 1;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   TAKE ACTION
+───────────────────────────────────────────── */
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.accordion {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+}
+
+.accordion:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.accordionHdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.15rem 0;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.accordionHdr:hover {
+  opacity: 0.75;
+}
+
+.accordionHdrLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.accordionHdrIcon {
+  color: var(--accent-sage);
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.accordionHdr h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.accordionHdr p {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.chevron {
+  color: var(--text-tertiary);
+  transition: transform 0.3s ease;
+  display: flex;
+  font-size: 0.85rem;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.accordionBody {
+  padding: 0 0 1.25rem 2.35rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.actionRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.actionRow:last-child {
+  border-bottom: none;
+}
+
+.actionRow h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.actionRow p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.actionBtn {
+  padding: 0.45rem 1rem;
+  border-radius: 50rem;
+  background: rgba(109, 186, 161, 0.1);
+  border: 1px solid rgba(109, 186, 161, 0.3);
+  color: var(--accent-sage);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Outfit', sans-serif;
+  transition: background 0.2s ease;
+}
+
+.actionBtn:hover {
+  background: rgba(109, 186, 161, 0.2);
+}
+
+
+
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .zigzagRow,
+  .zigzagRowReverse {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .actionRow {
+    grid-template-columns: 1fr;
+  }
+}
