@@ -33,7 +33,7 @@ export default function Navbar() {
       });
 
       setActive(closest);
-      const path = closest === "" ? "#hero" : `#${closest}`;
+      const path = closest === "hero" ? "" : `#${closest}`;
       history.replaceState(null, "", path);
     };
 
