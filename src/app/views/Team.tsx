@@ -13,7 +13,7 @@ const members = [
       <p>Nikola is behind the idea of initiating AHA Labs. She holds a Research MA in linguistics and a BA in language, cognition, and computer science. Find her on <a href="https://www.linkedin.com/in/nowemoore/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-sage)" }}>
   <FontAwesomeIcon icon={faLinkedin} />LinkedIn 
 </a> or check out her <a href="https://nowemoore.com/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-sage)" }}>
-  <FontAwesomeIcon icon={faLink} />personal website</a>. She's huge on tea and cold weather.</p>
+  <FontAwesomeIcon icon={faLink} />personal website</a>. </p>
     ),
   },
   {

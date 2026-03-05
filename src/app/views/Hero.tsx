@@ -138,7 +138,7 @@ export default function Hero() {
         </h1>
 
         <p className={hero.heroSub}>
-          AI makes decisions faster (and sometimes also better) than humans. AHA Labs are here to help make sure
+          AI makes decisions faster (and sometimes also better) than humans. AHA (AI for Human Agency) Labs are here to help make sure
           that efficiency doesn&apos;t cost humanity control.
         </p>
 

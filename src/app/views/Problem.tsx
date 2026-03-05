@@ -25,8 +25,8 @@ const items = [
       <p>
         Unverified decisions made with AI result in errors <a href="https://arxiv.org/pdf/2411.00998" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-sage)" }}><FontAwesomeIcon icon={faLink}></FontAwesomeIcon>larger</a> than any other automation bias. Each overlooked error puts
         the next decision at risk. Imagine that decision is{" "}
-        <span style={{ color: "var(--accent-sage)" }}>a medical diagnosis. </span>
-        <span style={{ color: "var(--accent-teal)" }}>An investment. </span>
+        <span style={{ color: "var(--accent-sage)" }}>an investment. </span>
+        <span style={{ color: "var(--accent-teal)" }}>A medical diagnosis. </span>
         <span style={{ color: "var(--accent-forest)" }}>A military call.</span>
       </p>
     ),
