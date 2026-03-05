@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./components.module.css";
-
+import Image from 'next/image';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRoadBarrier, faFlask, faRocket, faBullseye, faStopwatch, faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -46,7 +46,7 @@ export default function Navbar() {
     <nav className={styles.nav}>
       <button onClick={() => scrollTo("hero")} className={styles.navLogo} style={{ background: "none", border: "none", display: "flex", alignItems: "center", gap: "0.4rem" }}>
         AHA
-        <img src="/icon_dm.svg" alt="" style={{ width: "2.2rem", height: "1.8rem" }} />
+        <Image src="/icon_dm.svg" width={35} height={28} alt="" style={{ width: "2.2rem", height: "1.8rem" }} />
         <span>Labs</span>
       </button>
       <div className={styles.navLinks}>
