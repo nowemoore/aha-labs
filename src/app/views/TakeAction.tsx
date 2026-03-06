@@ -39,7 +39,7 @@ export default function TakeAction() {
           <FontAwesomeIcon icon={faRocket} /> Be Part of the Story
         </h1>
         <p className={styles.sectionText}>
-          <span style={{ color: "var(--accent-sage)" }}>Many ways to get involved!</span> Choose one that fits you best.
+          <span style={{ color: "var(--accent-magenta-soft)" }}>Many ways to get involved!</span> Choose one that fits you best.
         </p>
         <div className={styles.accordionList}>
           {GROUPS.map((g) => {
@@ -49,7 +49,7 @@ export default function TakeAction() {
                 <div className={styles.accordionHdr} onClick={() => setOpen(isOpen ? "" : g.id)}>
                   <div className={styles.accordionHdrLeft}>
                     <div className={styles.accordionHdrIcon}>
-                      <FontAwesomeIcon icon={g.icon} />
+                      <FontAwesomeIcon icon={g.icon} style={{color: "var(--accent-magenta-soft)"}} />
                     </div>
                     <div>
                       <h3>{g.label}</h3>
@@ -57,7 +57,7 @@ export default function TakeAction() {
                     </div>
                   </div>
                   <div className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}>
-                    <FontAwesomeIcon icon={faChevronDown} style={{ color: isOpen ? "var(--accent-sage)" : "var(--text-tertiary)" }} />
+                    <FontAwesomeIcon icon={faChevronDown} style={{ color: isOpen ? "var(--accent-magenta-soft)" : "var(--text-tertiary)" }} />
                   </div>
                 </div>
                 {isOpen && (
@@ -75,7 +75,7 @@ export default function TakeAction() {
           })}
         </div>
         <p style={{ marginTop: "2rem", textAlign: "right", fontSize: "0.85rem", opacity: 0.7 }}>
-          If any of this sparked something or you want to explore working together, please <a href="mailto:nowe.moore@gmail.com" style={{ color: "var(--accent-teal)" }}>reach out</a>.
+          If any of this sparked something or you want to explore working together, please <a href="mailto:nowe.moore@gmail.com" style={{ color: "var(--accent-magenta)" }}>reach out</a>.
         </p>
       </div>
     </section>
