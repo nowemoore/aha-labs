@@ -364,7 +364,7 @@ const timelineData: TimelineItem[] = [
       <span key="p1" className={styles.paraLeft}>
         The final part of this study is where all pieces come together to form a risk metric for gradual disempowerment in human-AI decision-making. By combining the two severity matrices (model error rates and disempowerment-conducive behaviour) with the probability matrix (disempowerment cues from human real-world interactions with models), this study derives <span style={{color: 'var(--accent-magenta-soft)'}}>expected values for disempowerment risk</span> across task types and judgment-impairing conditions. We arrive at a metric that will grow in accuracy and reliability upon collecting more data and can be customised to specific use cases.
       </span>,
-      <span key="p1" className={styles.paraRight}>
+      <span key="p2" className={styles.paraRight}>
         Left to their own devices, humans tend to <span style={{color: 'var(--accent-sage)'}}>overcorrect for probability</span>: we pay attention to probable but low-value events but disregard improbable but high-value events. This bias is practical (people <i>should</i> take more precautions against getting pickpocketed rather than struck by the lightning), but unhelpful in measuring exposure to disempowerment. Improbable but costly risk from AI must still be taken seriously. Probable but low-cost risk should likewise be monitored. This study's metric accounts for both extremes, providing a foundation for early detection and context-specific response when appropriate. 
       </span>,
       <div style={{ height: "1rem" }} key="spacer" />,
