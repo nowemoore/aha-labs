@@ -1,3 +1,4 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlask, faAnglesDown, faShuffle, faGaugeHigh, faWrench, faRoute, faMagnifyingGlass, faBoltLightning, faGears, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
 import styles from "./views.module.css";
