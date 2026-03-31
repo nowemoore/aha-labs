@@ -46,6 +46,9 @@
   font-size: 1.8rem;
   color: var(--text-primary);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .navLogo span {
@@ -76,6 +79,185 @@
 
 .navCta:hover {
   background: rgba(109, 186, 161, 0.22) !important;
+}
+
+/* Show/hide desktop vs mobile nav */
+.navDesktop {
+  display: flex;
+}
+
+.navMobile {
+  display: none;
+  z-index: 400;
+}
+
+@media (max-width: 768px) {
+  .navDesktop {
+    display: none;
+  }
+  .navMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   HAMBURGER BUTTON
+───────────────────────────────────────────── */
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent-sage);
+}
+
+/* Centred logo on mobile bar */
+.navLogoMobile {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+}
+
+
+/* ─────────────────────────────────────────────
+   DRAWER OVERLAY
+───────────────────────────────────────────── */
+
+.drawerOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 200;
+  transition: background 0.35s ease;
+  pointer-events: none;
+}
+
+.drawerOverlayOpen {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+@media (max-width: 768px) {
+  .drawerOverlay {
+    display: block;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   SLIDE-IN DRAWER
+───────────────────────────────────────────── */
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    visibility: visible;
+  }
+}
+
+/* Nav items list */
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.drawerNavItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  transition: background 0.2s ease, color 0.2s ease;
+  opacity: 0;
+  animation: drawerItemIn 0.35s ease forwards;
+}
+
+@keyframes drawerItemIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.drawerNavItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.drawerNavIcon {
+  width: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--accent-sage);
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+/* Pink "Get Involved" item */
+.drawerNavPink {
+  color: var(--accent-magenta-soft) !important;
+}
+
+.drawerNavPink .drawerNavIcon {
+  color: var(--accent-magenta-soft) !important;
+  opacity: 1;
+}
+
+.drawerNavPink:hover {
+  background: rgba(189, 72, 182, 0.08) !important;
 }
 
 
@@ -528,5 +710,14 @@
   .expandGrid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
   }
 }

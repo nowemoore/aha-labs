@@ -92,8 +92,8 @@ export default function Approach() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", maxWidth: "50rem", margin: "3.5rem auto 0" }}>
           {researchBases.map((item, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-              <div style={{ flexShrink: 0, width: "6rem", height: "6rem", borderRadius: "50%", border: "1.5px solid var(--text-primary)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--text-primary)", fontSize: "2.5rem" }}>
+            <div key={i} className={styles.researchItem}>
+              <div className={styles.researchIcon}>
                 <FontAwesomeIcon icon={item.icon} />
               </div>
               {item.text}
